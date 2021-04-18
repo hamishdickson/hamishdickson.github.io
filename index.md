@@ -1,7 +1,7 @@
-Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
+Hi and welcome to Hamish's blog
 
-![Image of fast.ai logo](images/logo.png)
+I'm interested in machine learning (mainly NLP and sequence data). I also like to play with reinforcement learning, but honestly I'm terrible at it. I've spent time as a backend engineer, a data engineer and a data scientist.
 
-## This is a title
+Right now I'm a Senior Data Scientist at OVO Energy, based in the UK
 
-And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
+You can find out more about me on [LinkedIn](https://www.linkedin.com/in/hamishdickson/) (not going to lie though, I'm terrible at reading my messages on there)
