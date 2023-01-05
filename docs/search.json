@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "A New Start",
+    "section": "",
+    "text": "Hi and thanks for getting this far!\nI’m excited to announce that after over 15 years of working in finance and then startups I have decided to become a freelancer!\nAs part of this I am (re)launching my blog. Most of my old posts have been converted to public notebooks on Kaggle, if you are interested please check them out.\nI hope here you will find interesting articles on what I’m working on, techniques I use a lot and hopefully a few demos. It will also act as a way for me to be more contactable… so please get in touch!"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Hamish Dickson",
@@ -11,6 +18,6 @@
     "href": "index.html",
     "title": "blog",
     "section": "",
-    "text": "No matching items"
+    "text": "A New Start\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 4, 2023\n\n\nHamish Dickson\n\n\n\n\n\n\nNo matching items"
   }
 ]

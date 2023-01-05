@@ -3,7 +3,6 @@ title: "A New Start"
 author: "Hamish Dickson"
 date: "2023-01-04"
 categories: [news]
-draft: true
 ---
 
 Hi and thanks for getting this far!
