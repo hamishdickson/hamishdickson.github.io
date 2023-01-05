@@ -1,0 +1,18 @@
+---
+title: "A New Start"
+author: "Hamish Dickson"
+date: "2023-01-04"
+categories: [news]
+draft: true
+---
+
+Hi and thanks for getting this far!
+
+I'm excited to announce that after over 15 years of working in finance and then startups I have decided to become a freelancer!
+
+As part of this I am (re)launching my blog. Most of my old posts have been converted to public notebooks on Kaggle, if you are interested please check them out.
+
+I hope here you will find interesting articles on what I'm working on, techniques I use a lot and hopefully a few demos. It will also act as a way for me to be more contactable... so please get in touch!
+
+![](thumbnail.jpg)
+

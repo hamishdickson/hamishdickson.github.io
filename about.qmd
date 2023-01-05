@@ -1,0 +1,26 @@
+---
+title: "Hamish Dickson"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/_mishy
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/hamishdickson/
+    - icon: github
+      text: Github
+      href: https://github.com/hamishdickson
+
+---
+
+Hi, Hamish here. I am a London (UK) based freelancer specialising in NLP and Deep Learning.
+
+I have spent over 15 years working in finance and multiple startups, building everything from SaaS solutions for some of the biggest investment banks in the world to B2C solutions in tiny startups.
+
+My background is in Theoretical Physics which I studied at Imperial College London.
+
+If you think I can help your business please get in touch, I am easily contactable via the links below!
+
