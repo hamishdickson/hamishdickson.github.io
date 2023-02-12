@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "posts/snowflake/index.html",
+    "href": "posts/snowflake/index.html",
+    "title": "Loading a CSV into Snowflake with Python",
+    "section": "",
+    "text": "Snowflake has a great python connector called write_pandas which takes a pandas DataFrame and will use Arrow for type safety and clever compression techniques to upload it to Snowflake for you.\nBut sadly this is quite a large package and at a recent client using this wasn’t an option for various reasons. Unfortunitely I’ve always found the Snowflake docs… lacking or maybe just confusing on what your other options are.\nSo here’s what I found worked:"
+  },
+  {
+    "objectID": "posts/snowflake/index.html#first-create-your-destination-table",
+    "href": "posts/snowflake/index.html#first-create-your-destination-table",
+    "title": "Loading a CSV into Snowflake with Python",
+    "section": "First create your destination table",
+    "text": "First create your destination table\nCreate your table in Snowflake. There are many ways to do this, but lets just do it in a Worksheet.\ncreate or replace TABLE MY_DATABASE.MY_SCHEMA.MY_TABLE (\n    COL1 NUMBER(38,0) NOT NULL,\n    COL2 VARCHAR(20),\n    COL3 VARCHAR(200),\n);\nYou should see a helpful notifiction saying that this worked."
+  },
+  {
+    "objectID": "posts/snowflake/index.html#now-create-your-file-format",
+    "href": "posts/snowflake/index.html#now-create-your-file-format",
+    "title": "Loading a CSV into Snowflake with Python",
+    "section": "Now create your file format",
+    "text": "Now create your file format\nThis bit took me some time to figure out.\nYou need a file format. This seems to be a file telling Snowflake what to expect when data is uploaded with a PUT. I don’t know how I feel about the fact this exist, I don’t remember ever having to do anything like this for BigQuery but I can appreciate that the flexibility might be helpful to some.\nAgain, this is a Snowflake thing, do it in your Worksheet and you should see a success message\ncreate or replace file format csv_format\n  type = csv\n  field_delimiter = ','\n  skip_header = 1\n  null_if = ('NULL', 'null')\n  empty_field_as_null = true\n  compression = gzip\n  FIELD_OPTIONALLY_ENCLOSED_BY = '\"'\n  ESCAPE = \"\\\\\"\n  ESCAPE_UNENCLOSED_FIELD = None"
+  },
+  {
+    "objectID": "posts/snowflake/index.html#create-your-connection-to-snowflake",
+    "href": "posts/snowflake/index.html#create-your-connection-to-snowflake",
+    "title": "Loading a CSV into Snowflake with Python",
+    "section": "Create your connection to snowflake",
+    "text": "Create your connection to snowflake\nFirst you will need a connection. You should be able to get most of this information from your admin\nimport snowflake.connector\n\nsnowflake_connection = snowflake.connector.connect(\n    user=SNOWFLAKE_USER,\n    password=SNOWFLAKE_PASSWORD,\n    account=SNOWFLAKE_ACCOUNT,\n    role=SNOWFLAKE_ROLE,\n    warehouse=SNOWFLAKE_WAREHOUSE,\n    database=\"MY_DATABASE\",\n    schema=\"MY_SCHEMA\",\n)\nOnce connected you only nee to run the following:\nsnowflake_connection.cursor().execute(f\"USE SCHEMA MY_SCHEMA\")\nsnowflake_connection.cursor().execute(f\"PUT file:///my_file.csv @%TEST_TABLE\")\nsnowflake_connection.cursor().execute(f\"COPY INTO TEST_TABLE file_format=(format_name = 'csv_format')\")\nThis will upload your file for you and append it to your TEST_TABLE. Note, I said append, this is a column orientated database designed for large datasets, so it will take you some work to do something more akin to UPSERT.\nHope that helped, contact me on Twitter if you have any questions."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "A New Start",
+    "section": "",
+    "text": "Hi and thanks for getting this far!\nI’m excited to announce that after over 15 years of working in finance and then startups I have decided to become a freelancer!\nAs part of this I am (re)launching my blog. Most of my old posts have been converted to public notebooks on Kaggle, if you are interested please check them out.\nI hope here you will find interesting articles on what I’m working on, techniques I use a lot and hopefully a few demos. It will also act as a way for me to be more contactable… so please get in touch!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "blog",
+    "section": "",
+    "text": "Loading a CSV into Snowflake with Python\n\n\n\n\n\n\n\nshorts\n\n\n\n\n\n\n\n\n\n\n\nFeb 12, 2023\n\n\nHamish Dickson\n\n\n\n\n\n\n  \n\n\n\n\nA New Start\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 4, 2023\n\n\nHamish Dickson\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Hamish Dickson",
+    "section": "",
+    "text": "Hi, Hamish here. I am a London (UK) based freelancer specialising in NLP and Deep Learning.\nI have spent over 15 years working in finance and multiple startups, building everything from SaaS solutions for some of the biggest investment banks in the world to B2C solutions in tiny startups.\nMy background is in Theoretical Physics which I studied at Imperial College London.\nIf you think I can help your business please get in touch, I am easily contactable via the links below!"
+  }
+]
