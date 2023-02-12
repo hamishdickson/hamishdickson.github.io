@@ -1,0 +1,77 @@
+---
+title: "Loading a CSV into Snowflake with Python"
+author: "Hamish Dickson"
+date: "2023-02-12"
+categories: [code][shorts]
+---
+
+Snowflake has a great python connector called `write_pandas` which takes a pandas DataFrame and will use Arrow for type safety and clever compression techniques to upload it to Snowflake for you.
+
+But sadly this is quite a large package and at a recent client using this wasn't an option for various reasons. Unfortunitely I've always found the Snowflake docs... lacking or maybe just confusing on what your other options are.
+
+So here's what I found worked:
+
+## First create your destination table
+
+Create your table in Snowflake. There are many ways to do this, but lets just do it in a Worksheet. 
+
+```sql
+create or replace TABLE MY_DATABASE.MY_SCHEMA.MY_TABLE (
+	COL1 NUMBER(38,0) NOT NULL,
+	COL2 VARCHAR(20),
+	COL3 VARCHAR(200),
+);
+```
+
+You should see a helpful notifiction saying that this worked.
+
+## Now create your file format
+
+This bit took me some time to figure out.
+
+You need a [file format](https://docs.snowflake.com/en/sql-reference/sql/create-file-format.html). This seems to be a file telling Snowflake what to expect when data is uploaded with a PUT. I don't know how I feel about the fact this exist, I don't remember ever having to do anything like this for BigQuery but I can appreciate that the flexibility might be helpful to some.
+
+Again, this is a Snowflake thing, do it in your Worksheet and you should see a success message
+
+```sql
+create or replace file format csv_format
+  type = csv
+  field_delimiter = ','
+  skip_header = 1
+  null_if = ('NULL', 'null')
+  empty_field_as_null = true
+  compression = gzip
+  FIELD_OPTIONALLY_ENCLOSED_BY = '"'
+  ESCAPE = "\\"
+  ESCAPE_UNENCLOSED_FIELD = None
+```
+
+## Create your connection to snowflake
+
+First you will need a connection. You should be able to get most of this information from your admin
+
+```python
+import snowflake.connector
+
+snowflake_connection = snowflake.connector.connect(
+    user=SNOWFLAKE_USER,
+    password=SNOWFLAKE_PASSWORD,
+    account=SNOWFLAKE_ACCOUNT,
+    role=SNOWFLAKE_ROLE,
+    warehouse=SNOWFLAKE_WAREHOUSE,
+    database="MY_DATABASE",
+    schema="MY_SCHEMA",
+)
+```
+
+Once connected you only nee to run the following:
+
+```python
+snowflake_connection.cursor().execute(f"USE SCHEMA MY_SCHEMA")
+snowflake_connection.cursor().execute(f"PUT file:///my_file.csv @%TEST_TABLE")
+snowflake_connection.cursor().execute(f"COPY INTO TEST_TABLE file_format=(format_name = 'csv_format')")
+```
+
+This will upload your file for you and append it to your TEST_TABLE. Note, I said append, this is a column orientated database designed for large datasets, so it will take you some work to do something more akin to UPSERT.
+
+Hope that helped, [contact me on Twitter](https://twitter.com/_mishy) if you have any questions.
