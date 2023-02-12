@@ -2,7 +2,7 @@
 title: "Loading a CSV into Snowflake with Python"
 author: "Hamish Dickson"
 date: "2023-02-12"
-categories: [code][shorts]
+categories: [shorts]
 ---
 
 Snowflake has a great python connector called `write_pandas` which takes a pandas DataFrame and will use Arrow for type safety and clever compression techniques to upload it to Snowflake for you.
