@@ -176,6 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <h1 class="title">Loading a CSV into Snowflake with Python</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">shorts</div>
+                <div class="quarto-category">code</div>
               </div>
                   </div>
   </div>
@@ -211,6 +212,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<p><img src="thumbnail.jpeg" class="img-fluid"></p>
 <p>Snowflake has a great python connector called <code>write_pandas</code> which takes a pandas DataFrame and will use Arrow for type safety and clever compression techniques to upload it to Snowflake for you.</p>
 <p>But sadly this is quite a large package and at a recent client using this wasn’t an option for various reasons. Unfortunitely I’ve always found the Snowflake docs… lacking or maybe just confusing on what your other options are.</p>
 <p>So here’s what I found worked:</p>
