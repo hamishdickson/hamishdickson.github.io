@@ -1,0 +1,87 @@
+---
+title: "Using Prompt Engineering to create labelled data"
+author: "Hamish Dickson"
+date: "2023-02-20"
+categories: [nlp, code]
+draft: true
+---
+
+In this post I'm going to walk you through a technique I developed while working at [Sprout.ai](sprout.ai) for training NLP models with very few examples. Thank you to Sprout.ai for letting me talk about this publically.
+
+
+## The general idea
+
+We want to get to the point where we can generate synthetic data to train a model. Here to restrict things a bit, we're going to restrict this task to extracting key data from a paragraph or so of text. You see this task all the time when dealing with insurance claims - for example someone may be claiming for a new TV, to process the claim you need the model.
+
+We are going to use a few shot model and a little prompt engineering to generate enough examples to hopefully train a downstream model. There are a couple of not-obvious things you have to do along the way, but lets get started.
+
+
+## Few shot models
+
+If you've not played with few shot models yet, you really should - it's quite interesting.
+
+You provide them with maybe 3 to 5 examples of what you want and they have been trained in a way where they will try to continue the pattern.
+
+```python
+prompt = """
+label: samsung 38 inch tv
+claim: my 5 year old son was playing with his toy action figure and threw it at the tv. It's a samsung 38 inch tv and 2 years old.
+
+######
+
+label: samsung 38 inch tv
+claim: my 5 year old son was playing with his toy action figure and threw it at the tv. It's a samsung 38 inch tv and 2 years old.
+
+######
+
+label: samsung 38 inch tv
+claim: my 5 year old son was playing with his toy action figure and threw it at the tv. It's a samsung 38 inch tv and 2 years old.
+
+######
+
+label: samsung 38 inch tv
+claim:
+"""
+```
+
+So what are we doing here?
+
+
+## Generating Samples
+
+Now we have a prompt, we need our model to generate the next claim.
+
+We're going to use `EleutherAI/gpt-neo-1.3B` as our model here, who's Hugging Face model card is [here](https://huggingface.co/EleutherAI/gpt-neo-1.3B). It's a little on the small size for what we're trying to use so if you're going to use this for real try a bigger model
+
+
+```python
+import transformers
+
+model_name = "EleutherAI/gpt-neo-1.3B"
+
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
+
+model = transformers.AutoModelForCausalLM.from_pretrained(model_name)
+
+prompt = "..." # as above
+
+input_ids = tokenizer(prompt, return_tensors='pt').input_ids
+
+print(tokenizer.decode(output[0], skip_special_tokens=True))
+```
+
+Here we're using [constructive search](https://huggingface.co/blog/introducing-csearch)
+
+
+
+## The downstream model
+
+
+
+## Other bits
+
+discriminator
+
+filters etc
+
+patent details

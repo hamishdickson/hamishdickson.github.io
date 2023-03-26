@@ -16,5 +16,11 @@
   },
   "posts/snowflake/index.qmd": {
     "index.html": "ad5a3680"
+  },
+  "posts/patent/index.qmd": {
+    "index.html": "07bb60a7"
+  },
+  "posts/retro/index.qmd": {
+    "index.html": "497ba432"
   }
 }
