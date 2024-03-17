@@ -22,5 +22,14 @@
   },
   "posts/retro/index.qmd": {
     "index.html": "497ba432"
+  },
+  "posts/chatgpt1/index.qmd": {
+    "index.html": "a34c8e2b"
+  },
+  "posts/stablem2/index.qmd": {
+    "index.html": "3cfd6abc"
+  },
+  "posts/hf_no_download/index.qmd": {
+    "index.html": "51091c95"
   }
 }
