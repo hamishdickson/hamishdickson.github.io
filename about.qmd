@@ -4,9 +4,6 @@ image: profile.jpg
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/_mishy
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/hamishdickson/
@@ -22,5 +19,5 @@ I have spent over 15 years working in finance and multiple startups, building ev
 
 My background is in Theoretical Physics which I studied at Imperial College London.
 
-If you think I can help your business please get in touch, I am easily contactable via the links below!
+If you think I can help your business please get in touch!
 
