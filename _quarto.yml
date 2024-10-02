@@ -11,8 +11,6 @@ website:
         href: https://www.linkedin.com/in/hamishdickson/
       - icon: github
         href: https://github.com/hamishdickson
-      - icon: twitter
-        href: https://twitter.com/_mishy
 format:
   html:
     theme: cosmo
