@@ -81,6 +81,27 @@
     "href": "about.html",
     "title": "Hamish Dickson",
     "section": "",
-    "text": "Hi, Hamish here. I am a London (UK) based freelancer specialising in NLP and Deep Learning.\nI have spent over 15 years working in finance and multiple startups, building everything from SaaS solutions for some of the biggest investment banks in the world to B2C solutions in tiny startups.\nMy background is in Theoretical Physics which I studied at Imperial College London.\nIf you think I can help your business please get in touch!"
+    "text": "Hi, I’m Hamish Dickson, a Senior Machine Learning Engineer based in London, UK. I specialize in delivering production-ready ML solutions with a focus on NLP, LLMs, and deep learning systems.\nCurrently, I’m working as a Senior Machine Learning Engineer (Contract) at Spotify, where I’m exploring innovative approaches to ad optimization and recommendation systems. I enjoy tackling complex ML challenges and turning research into practical solutions that make a real impact."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "Hamish Dickson",
+    "section": "Background",
+    "text": "Background\nI have over 15 years of experience working across finance, startups, and tech companies. My journey spans from building SaaS solutions for major investment banks to developing ML systems at fast-growing startups like Sprout.ai and DriveTribe.\nMy academic background is in Theoretical Physics from Imperial College London, where I studied Quantum Field Theory, General Relativity, and Quantum Optics."
+  },
+  {
+    "objectID": "about.html#technical-expertise",
+    "href": "about.html#technical-expertise",
+    "title": "Hamish Dickson",
+    "section": "Technical Expertise",
+    "text": "Technical Expertise\nI work primarily with Python, PyTorch, and Hugging Face Transformers, specializing in: - Large Language Models (LLMs) and fine-tuning - NLP and text processing systems - OCR and document understanding - Streaming systems and real-time ML - Reinforcement Learning\nI also have spent a great deal of my career working on streaming systems, specifically using Scala, Kafka, and Flink. More recently at Spotify I have been using scio."
+  },
+  {
+    "objectID": "about.html#get-in-touch",
+    "href": "about.html#get-in-touch",
+    "title": "Hamish Dickson",
+    "section": "Get in touch",
+    "text": "Get in touch\nIf you think I can help your business with ML solutions, please get in touch!"
   }
 ]
