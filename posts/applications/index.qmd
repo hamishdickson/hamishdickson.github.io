@@ -66,6 +66,41 @@ The chart shows two lines:
 
 This app does not collect, store, or transmit any personal data. All calculations are performed locally on your device.
 
+## Privacy Policy
+
+**Effective Date:** September 24, 2025
+
+### Information We Collect
+
+**Savings Calculator** does not collect, store, or transmit any personal information. The app operates entirely offline and locally on your device.
+
+### Data Usage
+
+- All financial calculations are performed locally on your device
+- No data is sent to external servers or third parties
+- No analytics or usage tracking is implemented
+- No personal information is stored or transmitted
+
+### Third-Party Services
+
+The app may display advertisements through Google AdMob. AdMob may collect certain information for advertising purposes as outlined in their privacy policy. You can review Google's privacy policy at: https://policies.google.com/privacy
+
+### Data Security
+
+Since no personal data is collected or transmitted, there are no data security concerns regarding your personal information.
+
+### Children's Privacy
+
+Our app does not collect any information from children under 13 years of age.
+
+### Changes to This Privacy Policy
+
+We may update this privacy policy from time to time. Any changes will be posted on this page with an updated effective date.
+
+### Contact Us
+
+If you have any questions about this privacy policy, please contact us at: [your-email@domain.com]
+
 ### Support
 
 For questions, feedback, or technical support, please contact: [your-email@domain.com]
