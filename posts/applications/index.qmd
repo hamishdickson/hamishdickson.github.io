@@ -1,0 +1,82 @@
+---
+title: "Applications"
+author: "Hamish Dickson"
+date: "2025-09-24"
+categories: [apps]
+---
+
+## Savings Calculator
+
+A comprehensive iOS app for calculating compound interest and visualizing savings growth over time.
+
+### Features
+
+**Multi-Currency Support**
+- Supports 10 major currencies: USD, EUR, GBP, CAD, AUD, JPY, CHF, SEK, NOK, DKK
+- Automatic currency detection based on your device's locale
+- Proper currency formatting with native symbols
+
+**Advanced Calculations**
+- Initial deposit amount
+- Monthly contribution planning
+- Annual interest rate input (with percentage conversion)
+- Time horizon in years
+- Monthly compounding for accurate results
+
+**Visual Analytics**
+- Interactive line chart showing savings growth over time
+- Dual-line visualization: Total Value vs. Contributions
+- Year-by-year breakdown of your savings journey
+- Clear distinction between money contributed and interest earned
+
+**User-Friendly Interface**
+- Clean, intuitive design with green accent colors
+- Input validation with real-time feedback
+- Results summary with highlighted future value
+- Responsive layout optimized for all iOS devices
+
+### How to Use
+
+1. **Set Your Initial Amount**: Enter your starting savings balance
+2. **Choose Currency**: Select from supported currencies or use auto-detected currency
+3. **Plan Monthly Contributions**: Set how much you'll save each month
+4. **Set Interest Rate**: Enter expected annual return (e.g., 4.0 for 4%)
+5. **Define Time Horizon**: Choose how many years to project
+6. **Calculate**: Tap the calculate button to see your results
+
+### Understanding Your Results
+
+**Future Value**: Your total savings at the end of the time period
+**Total Contributions**: Sum of your initial deposit plus all monthly contributions
+**Interest Earned**: The difference between future value and total contributions
+
+The chart shows two lines:
+- **Green line (Total Value)**: Your complete savings including compound interest
+- **Blue dashed line (Contributions)**: Just the money you've contributed over time
+
+### Technical Details
+
+- Built with SwiftUI for modern iOS experience
+- Uses Charts framework for data visualization
+- Implements proper compound interest formulas with monthly compounding
+- Supports iOS 15.0 and later
+- Optimized for iPhone and iPad
+
+### Privacy
+
+This app does not collect, store, or transmit any personal data. All calculations are performed locally on your device.
+
+### Support
+
+For questions, feedback, or technical support, please contact: [your-email@domain.com]
+
+### Version History
+
+**Version 1.0** (September 2025)
+- Initial release
+- Multi-currency support
+- Interactive savings calculator
+- Visual growth charts
+- Comprehensive results display
+
+

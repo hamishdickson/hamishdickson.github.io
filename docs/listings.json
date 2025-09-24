@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/applications/index.html",
       "/posts/hf_grad_chk/index.html",
       "/posts/hf_no_download/index.html",
       "/posts/snowflake/index.html",
