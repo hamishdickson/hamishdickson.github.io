@@ -1,0 +1,116 @@
+---
+title: "Emoji Recall"
+author: "Hamish Dickson"
+date: "2025-10-12"
+categories: [apps, games]
+---
+
+## Emoji Recall
+
+Challenge your memory with Emoji Recall! Watch emoji sequences and repeat them back. Each level adds new emojis, making it progressively harder. Can you reach level 100?
+
+### Features
+
+**Progressive Difficulty**
+- 100 challenging levels to master
+- Each level introduces new emojis to remember
+- Difficulty scales naturally as you progress
+- Perfect for both quick sessions and extended play
+
+**Rich Emoji Collection**
+- 140+ unique emojis to unlock
+- Diverse emoji categories for variety
+- New emojis revealed as you advance
+- Colorful and engaging visual experience
+
+**User Experience**
+- Clean, intuitive interface
+- Best score tracking to monitor your progress
+- Simple tap-to-play mechanics
+- Instant feedback on your performance
+- Smooth animations and transitions
+
+**Brain Training**
+- Enhance your short-term memory
+- Improve pattern recognition skills
+- Boost concentration and focus
+- Perfect for quick mental workouts
+
+### How to Play
+
+1. **Watch the Sequence**: Emojis will appear on screen one by one
+2. **Memorize**: Pay attention to the order of emojis shown
+3. **Recall**: Tap the emojis in the correct order
+4. **Advance**: Successfully complete a level to unlock the next one
+5. **Challenge Yourself**: Try to reach level 100!
+
+### Tips for Success
+
+- **Focus**: Minimize distractions during the sequence display
+- **Practice**: Regular play helps improve your memory skills
+- **Patterns**: Look for patterns or create mental associations
+- **Take Breaks**: If you're stuck, come back with a fresh mind
+
+### Technical Details
+
+- Built with SwiftUI for modern iOS experience
+- Optimized for iPhone and iPad
+- Supports iOS 15.0 and later
+- Smooth performance across all devices
+- Lightweight app size
+
+### Privacy
+
+This app does not collect, store, or transmit any personal data. All game progress is stored locally on your device.
+
+## Privacy Policy
+
+**Effective Date:** October 12, 2025
+
+### Information We Collect
+
+**Emoji Recall** does not collect, store, or transmit any personal information. The app operates entirely offline and locally on your device.
+
+### Data Usage
+
+- All game data and scores are stored locally on your device
+- No data is sent to external servers or third parties
+- No analytics or usage tracking is implemented
+- No personal information is stored or transmitted
+
+### Third-Party Services
+
+The app may display advertisements through Google AdMob. AdMob may collect certain information for advertising purposes as outlined in their privacy policy. You can review Google's privacy policy at: https://policies.google.com/privacy
+
+### Data Security
+
+Since no personal data is collected or transmitted, there are no data security concerns regarding your personal information.
+
+### Children's Privacy
+
+Our app does not collect any information from children under 13 years of age.
+
+### Changes to This Privacy Policy
+
+We may update this privacy policy from time to time. Any changes will be posted on this page with an updated effective date.
+
+### Contact Us
+
+If you have any questions about this privacy policy, please contact us at: [your-email@domain.com]
+
+### Support
+
+For questions, feedback, or technical support, please contact: [your-email@domain.com]
+
+### Version History
+
+**Version 1.0** (October 2025)
+- Initial release
+- 100 levels of progressive difficulty
+- 140+ unique emojis
+- Best score tracking
+- Clean, intuitive interface
+- Brain training gameplay
+
+
+
